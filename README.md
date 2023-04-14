@@ -6,3 +6,6 @@ The topology will look like this:
 
 ![wvanlabwithS2S](https://user-images.githubusercontent.com/128983862/231878058-c3e1b080-727d-401a-baf6-f2a14cae40ca.png)
 
+You can run Terraform right from the Azure cloud shell by cloning this git repository with "git clone https://github.com/quiveringbacon/AzureVwanwithS2S.git ./terraform".
+
+Then, "cd terraform" then, "terraform init" and finally "terraform apply -auto-approve" to deploy.
