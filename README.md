@@ -4,7 +4,7 @@ This creates a vwan and a couple of spoke vnets with VM's connected to the vhub 
 
 The topology will look like this:
 
-![wvanlabwithS2S](https://user-images.githubusercontent.com/128983862/231878058-c3e1b080-727d-401a-baf6-f2a14cae40ca.png)
+![wvanlabwithS2S](https://user-images.githubusercontent.com/128983862/232786719-427d31c1-d48f-4eed-921c-a4e168b1f157.png)
 
 You can run Terraform right from the Azure cloud shell by cloning this git repository with "git clone https://github.com/quiveringbacon/AzureVwanwithS2S.git ./terraform".
 
