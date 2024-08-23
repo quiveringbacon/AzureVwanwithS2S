@@ -256,12 +256,12 @@ resource "azurerm_virtual_network" "spoke1-vnet" {
   name                = "spoke1-vnet"
   resource_group_name = azurerm_resource_group.RG.name
   subnet {
-    address_prefix     = "10.150.0.0/24"
+    address_prefixes     = ["10.150.0.0/24"]
     name                 = "default"
     security_group = azurerm_network_security_group.spokevnetNSG.id
   }
   subnet {
-    address_prefix     = "10.150.1.0/24"
+    address_prefixes    = ["10.150.1.0/24"]
     name                 = "GatewaySubnet" 
   }
   timeouts {
@@ -278,12 +278,12 @@ resource "azurerm_virtual_network" "spoke2-vnet" {
   name                = "spoke2-vnet"
   resource_group_name = azurerm_resource_group.RG.name
   subnet {
-    address_prefix     = "10.250.0.0/24"
+    address_prefixes     = ["10.250.0.0/24"]
     name                 = "default"
     security_group = azurerm_network_security_group.spokevnetNSG.id
   }
   subnet {
-    address_prefix     = "10.250.1.0/24"
+    address_prefixes     = ["10.250.1.0/24"]
     name                 = "GatewaySubnet" 
   }
   timeouts {
@@ -301,12 +301,12 @@ resource "azurerm_virtual_network" "onprem-vnet" {
   name                = "onprem-vnet"
   resource_group_name = azurerm_resource_group.RG.name
   subnet {
-    address_prefix     = "192.168.0.0/24"
+    address_prefixes     = ["192.168.0.0/24"]
     name                 = "default"
     security_group = azurerm_network_security_group.spokevnetNSG.id
   }
   subnet {
-    address_prefix     = "192.168.1.0/24"
+    address_prefixes     = ["192.168.1.0/24"]
     name                 = "GatewaySubnet" 
   }
   timeouts {
