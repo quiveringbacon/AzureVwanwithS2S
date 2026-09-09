@@ -436,7 +436,7 @@ resource "azurerm_virtual_network_gateway" "onpremvpngw" {
   resource_group_name = azurerm_resource_group.RG.name
   type     = "Vpn"
   sku           = "VpnGw1AZ"
-  enable_bgp    = true
+  bgp_enabled = true
   bgp_settings {
     asn = "65002"
   }
@@ -485,7 +485,7 @@ resource "azurerm_virtual_network_gateway_connection" "to-azure" {
   shared_key                 = "vpn123"
   type                       = "IPsec"
   virtual_network_gateway_id = azurerm_virtual_network_gateway.onpremvpngw.id
-  enable_bgp = true
+  bgp_enabled = true
   timeouts {
     create = "2h"
     read = "2h"
